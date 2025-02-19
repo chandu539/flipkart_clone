@@ -1,0 +1,100 @@
+.laptops-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.laptop-card {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  background: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.laptop-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.laptop-image {
+  width: 400px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.laptop-details {
+  flex: 1;
+}
+
+.laptop-name {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.laptop-rating {
+  color: #f39c12;
+  font-size: 1rem;
+}
+
+.laptop-specs {
+  list-style: none;
+  padding: 0;
+}
+
+.laptop-specs li {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+.laptop-price {
+  font-size: 1.3rem;
+  margin-top: 10px;
+}
+
+.current-laptop-price {
+  color: #27ae60;
+  font-weight: bold;
+}
+
+.old-laptop-price {
+  text-decoration: line-through;
+  color: #aaa;
+  margin-left: 10px;
+}
+
+.laptop-discount {
+  color: #e74c3c;
+  margin-left: 10px;
+}
+
+.laptop-button-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.add-to-cart-laptop,
+.buy-now-laptop {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.add-to-cart-laptop {
+  background: #f86f00;
+  color: white;
+}
+
+.buy-now-laptop {
+  background: #d40202;
+  color: white;
+}

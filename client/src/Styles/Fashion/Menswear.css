@@ -1,0 +1,118 @@
+.menswear-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .menswear-card {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    background: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .menswear-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .menswear-image {
+    width: 350px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .menswear-details {
+    flex: 1;
+  }
+  
+  .menswear-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .menswear-rating {
+    color: #f39c12;
+    font-size: 1rem;
+  }
+  
+  .menswear-specs {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .menswear-specs li {
+    font-size: 0.9rem;
+    margin: 5px 0;
+  }
+  
+  .menswear-price {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+  
+  .current-price {
+    color: #27ae60;
+    font-weight: bold;
+  }
+  
+  .old-price {
+    text-decoration: line-through;
+    color: #aaa;
+    margin-left: 10px;
+  }
+  
+  .discount {
+    color: #e74c3c;
+    margin-left: 10px;
+  }
+  
+  .button-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+  }
+  
+  .add-to-cart,
+  .buy-now {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .add-to-cart {
+    background: #f86f00;
+    color: white;
+  }
+  
+  .buy-now {
+    background: #d40202;
+    color: white;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .menswear-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .menswear-image {
+      width: 100%;
+      max-width: 300px;
+    }
+  
+    .menswear-card {
+      width: 90%;
+    }
+  }
+  

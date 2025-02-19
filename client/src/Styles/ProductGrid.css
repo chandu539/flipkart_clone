@@ -1,0 +1,167 @@
+/* Main Row Container */
+.product-grid-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px; /* Adds spacing between boxes */
+  padding: 20px;
+}
+
+/* Individual Box */
+.product-grid-box {
+  flex: 1;
+  border: 1px solid #ddd; /* Thin border */
+  border-radius: 8px;
+  padding: 10px;
+  background: #fff;
+  cursor: pointer;
+  text-align: center;
+  width: 40%; /* Adjust width to fit 2x2 grid */
+  height: auto;
+}
+
+/* Box Title */
+.box-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* 2×2 Grid for Products */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 10px;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+}
+
+/* Product Card */
+.product-grid-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #eee; /* Thin border for each product */
+  border-radius: 5px;
+  background: #ffffff;
+  width: 150px; /* Adjust width for proper fit */
+  height: auto;
+}
+
+/* Product Image */
+.product-grid-card img {
+  width: 150px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.product-grid-card img:hover{
+  transform: scale(1.05);
+}
+/* Product Name */
+.product-grid-name {
+  font-size: 14px;
+  margin-top: 5px;
+  font-weight: 500;
+  color: #555;
+  text-align: center;
+}
+
+/* Discount Labels */
+.discount-label {
+  font-size: 12px;
+  font-weight: bold;
+  padding: 5px 8px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.high-discount {
+  background: #e44d26;
+  color: white;
+}
+
+.low-discount {
+  background: #ffd700;
+  color: black;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .product-grid-container {
+    flex-direction: column; /* Stack boxes vertically */
+    align-items: center;
+  }
+
+  .product-grid-box {
+    width: 80%; /* Adjust width for better fit */
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* Keep 2x2 layout */
+  }
+
+  .product-grid-card {
+    width: 130px; /* Slightly reduce width */
+  }
+
+  .product-grid-card img {
+    width: 130px;
+  }
+
+  .product-grid-name {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr); /* Switch to single column */
+  }
+
+  .product-grid-box {
+    width: 90%;
+  }
+
+  .product-grid-card {
+    width: 120px;
+  }
+
+  .product-grid-card img {
+    width: 120px;
+  }
+
+  .product-grid-name {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-grid-box {
+    width: 95%;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .product-grid-card {
+    width: 100px;
+  }
+
+  .product-grid-card img {
+    width: 100px;
+  }
+
+  .product-grid-name {
+    font-size: 11px;
+  }
+
+  .discount-label {
+    font-size: 10px;
+    padding: 4px 6px;
+  }
+}

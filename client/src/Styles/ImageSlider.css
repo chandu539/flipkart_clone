@@ -1,0 +1,46 @@
+body {
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  margin: 10px;
+}
+
+.slider-container {
+  width: 100%;
+  margin: 10px auto;
+  padding-top: 0; /* Adjust based on navbar */
+  overflow: hidden; /* Prevent unwanted scrollbars */
+  position: relative; /* Ensure slider stays in place */
+}
+
+.slide {
+  display: flex; /* Align slides in a row */
+  white-space: nowrap; /* Prevent line breaks */
+}
+
+.slide img {
+  width: 100%;
+  height: 200px; /* Adjust height as needed */
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.slick-prev, .slick-next {
+  display: block !important; /* Ensure arrows are visible */
+  z-index: 1000; /* Make sure arrows are above images */
+  position: absolute; /* Keep arrows in place */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.slick-prev {
+  left: 10px; /* Adjust left arrow position */
+}
+
+.slick-next {
+  right: 10px; /* Adjust right arrow position */
+}
+
+.slick-prev::before, 
+.slick-next::before {
+  font-size: 30px; /* Adjust arrow size */
+  color: white; /* Make arrows visible */
+}

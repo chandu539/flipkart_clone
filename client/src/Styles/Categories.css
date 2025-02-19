@@ -1,0 +1,108 @@
+
+.categories-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    overflow-x: auto; /* Enables horizontal scrolling if needed */
+    white-space: nowrap;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  background-color: white;
+  margin: 8px;
+  margin-top: 80px;
+  padding-top: 10px;
+  
+  } 
+  
+  /* Individual category box */
+  .category-box {
+    background: white;  
+    width: 120px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    display:inline-block;
+    gap: 10px;
+  }
+  
+  .category-box img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Category image */
+  .category-box img {
+    width: 50%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  /* Category name */
+  .category-box p {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 8px;
+  }
+  
+  /* Responsive Design */
+@media (max-width: 1024px) {
+  .categories-container {
+    gap: 15px; /* Reduce spacing between category boxes */
+    padding: 10px;
+  }
+
+  .category-box {
+    width: 100px; /* Reduce size slightly */
+  }
+
+  .category-box img {
+    width: 60%;
+  }
+
+  .category-box p {
+    font-size: 0.9rem; /* Slightly smaller text */
+  }
+}
+
+@media (max-width: 768px) {
+  .categories-container {
+    display: flex;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    white-space: nowrap;
+    padding: 10px;
+    gap: 10px;
+    justify-content: flex-start;
+  }
+
+  .category-box {
+    width: 90px; /* Further reduce size */
+    flex-shrink: 0; /* Prevents the boxes from shrinking */
+  }
+
+  .category-box img {
+    width: 70%;
+  }
+
+  .category-box p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .categories-container {
+    gap: 8px;
+    padding: 8px;
+  }
+
+  .category-box {
+    width: 80px; /* Make the boxes even smaller for small screens */
+  }
+
+  .category-box img {
+    width: 80%;
+  }
+
+  .category-box p {
+    font-size: 0.8rem;
+  }
+}

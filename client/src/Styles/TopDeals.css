@@ -1,0 +1,116 @@
+/* =============== Top Deals Section =============== */
+.top-deals-container {
+  text-align: center;
+  padding: 15px;
+  background: #f8f9fa;
+  position: relative;
+  margin: 10px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Scrolling Deals Grid */
+.top-deals-grid {
+  display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 40px;
+    padding: 10px;
+    scrollbar-width: none;
+}
+
+/* Hide scrollbar for Chrome, Safari */
+.top-deals-grid::-webkit-scrollbar {
+  display: none;
+}
+
+/* Deal Card */
+.top-deals-card {
+  padding: 5px;
+  margin: 0;
+  border-radius: 8px;
+  box-shadow: 0 1px 0px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  min-width: 150px;
+  width: 150px; 
+  height: auto;
+  display: flex;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+/* Deal Card Image */
+.top-deals-card img {
+    width: 150px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+.top-deals-card img:hover{
+  transform: scale(1.05);
+}
+
+/* Deal Title */
+.top-deals-card h3 {
+  font-size: 16px;
+  margin:0;
+  padding: 0;
+  font-weight: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+}
+
+/* Discount Badge */
+.top-deals-discount {
+  font-size: 16px;
+    font-weight: bold;
+    color: #000000;
+    margin:0;
+    padding: 0;
+    border-radius: 5px;
+    background: #ffffff;
+    display: inline-block;
+}
+
+/* Navigation Arrows */
+.top-deals-arrow {
+  background: #dad8d8;
+  color: white;
+  border: none;
+  padding: 15px;
+  font-size: 30px;
+  cursor: pointer;
+  border-radius: 2px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  transition: background 0.3s;
+}
+
+/* Hover Effect on Arrows */
+.top-deals-arrow:hover {
+  background: #757d84;
+}
+
+/* Left Arrow */
+.top-deals-arrow-left {
+  left: 10px;
+}
+
+/* Right Arrow */
+.top-deals-arrow-right {
+  right: 10px;
+}

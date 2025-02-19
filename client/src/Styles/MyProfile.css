@@ -1,0 +1,79 @@
+/* MyProfile.css */
+
+/* General styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f1f3f6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Profile container */
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding-top: 60px;
+  position:relative;
+}
+
+/* Profile card */
+.profile-card {
+  background: white;
+  width: 380px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* Profile title */
+.profile-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #212121;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #2874f0;
+  padding-bottom: 10px;
+}
+
+/* Profile info */
+.profile-info {
+  font-size: 16px;
+  color: #424242;
+  padding: 8px 0;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: left;
+}
+
+/* Last item should not have a border */
+.profile-info:last-child {
+  border-bottom: none;
+}
+
+/* Loading text */
+.loading-text, .error-text {
+  font-size: 16px;
+  color: #ff5722;
+  font-weight: bold;
+}
+
+/* Logout button */
+.logout-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #fb641b;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #e65100;
+}

@@ -1,0 +1,51 @@
+.sidebar {
+    width: 250px;
+    background: #f4f4f4;
+    padding: 20px;
+    height: 100vh;
+    overflow-y: auto;
+    position: sticky;
+    top: 0;
+    border-right: 1px solid #ddd;
+  }
+  
+  .filter-section {
+    margin-bottom: 20px;
+  }
+  
+  .filter-section h4 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .input-box {
+    width: 80px;
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  label {
+    display: block;
+    margin: 5px 0;
+    font-size: 14px;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  ul li {
+    padding: 5px 0;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  ul li:hover {
+    color: #007bff;
+    text-decoration: none;
+  }
+  

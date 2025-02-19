@@ -1,0 +1,218 @@
+
+
+.navbarlogin {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #005fb8;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.brand-namelogin {
+    margin-left: 30px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    transition: color 0.3s ease-in-out;
+}
+
+.brand-namelogin:hover {
+    color: #ffcc00;
+}
+
+.search-boxlogin {
+    display: flex;
+    align-items: center;
+    margin-left: 60px; 
+    border-radius: 5px;
+    padding: 5px 10px;
+    width: 400px;
+    background-color: white;
+}
+
+.search-boxlogin input {
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    padding: 5px;
+    width: 100%;
+    background-color: white;
+}
+
+.search-iconlogin {
+    color: gray;
+    margin-right: 8px;
+    font-size: 1.8rem;
+    background-color: white;
+}
+
+.nav-containerlogin {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nav-linkslogin {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    margin-left: auto;
+}
+
+.nav-linkslogin li {
+    display: flex;
+    align-items: center;
+}
+
+.nav-linkslogin li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+    padding: 4px;
+    gap: 10px;
+}
+
+/* Icon Styling */
+.iconlogin {
+    font-size: 18px;
+}
+
+/* Dropdown container */
+.dropdownlogin {
+    position: relative;
+}
+
+/* Dropdown menu */
+.dropdown-menulogin {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #f8f9fa;  /* Light gray background */
+    color: black;
+    border-radius: 5px;
+    overflow: hidden;
+    min-width: 180px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* Fix color issue */
+.dropdown-menulogin a {
+    padding: 12px;
+    text-decoration: none;
+    color: #333;  /* Dark text for visibility */
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.dropdown-menulogin a:hover {
+    background: #e0e0e0; /* Slightly darker gray on hover */
+    color: #005fb8; /* Matches navbar theme */
+    width: 100%;
+}
+.wishlishlogo{
+    color: black;
+    background-color:black;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .brand-namelogin {
+      font-size: 1.8rem;
+      margin-left: 20px;
+    }
+  
+    .search-boxlogin {
+      width: 300px; /* Reduce width for smaller screens */
+      margin-left: 30px;
+    }
+  
+    .search-boxlogin input {
+      font-size: 1rem;
+    }
+  
+    .nav-linkslogin {
+      gap: 15px;
+    }
+  
+    .nav-linkslogin li a {
+      font-size: 1rem;
+      margin-right: 20px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .navbarlogin {
+      flex-direction: column;
+      padding: 10px;
+    }
+  
+    .brand-namelogin {
+      font-size: 1.6rem;
+      margin-left: 0;
+    }
+  
+    .search-boxlogin {
+      width: 250px;
+      margin: 10px auto;
+    }
+  
+    .nav-linkslogin {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+  
+    .nav-linkslogin li a {
+      font-size: 1rem;
+      margin: 0;
+      padding: 5px;
+    }
+  
+    .dropdown-menulogin {
+      position: static; /* Make dropdown visible without hover */
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .brand-namelogin {
+      font-size: 1.4rem;
+    }
+  
+    .search-boxlogin {
+      width: 90%;
+    }
+  
+    .nav-linkslogin {
+      gap: 5px;
+    }
+  
+    .nav-linkslogin li a {
+      font-size: 0.9rem;
+    }
+  
+    .dropdown-menulogin {
+      width: 100%;
+      min-width: unset;
+    }
+  }
+  

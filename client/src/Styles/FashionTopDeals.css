@@ -1,0 +1,134 @@
+.fashion-top-deals-container {
+  text-align: center;
+  padding: 1px;
+  position: relative;
+  background-color: white;
+  margin: 10px;
+}
+
+.fashion-top-deals-container h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Wrapper to position arrows */
+.fashion-scroll-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Fashion grid */
+.fashion-top-deals-grid {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 10px;
+  scrollbar-width: none; /* Hide scrollbar */
+  scroll-behavior: smooth;
+  width: 100%;
+}
+
+/* Hide scrollbar for Webkit browsers */
+.fashion-top-deals-grid::-webkit-scrollbar {
+  display: none;
+}
+
+/* Card design */
+.fashion-top-deals-card {
+  border-radius: 2px;
+    text-align: center;
+    min-width: 230px;
+    width: 150px; 
+    height:auto;
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2);
+}
+
+.fashion-top-deals-card img:hover {
+  transform: scale(1.05);
+}
+
+/* Ensure all images are same size */
+.fashion-top-deals-card img {
+  width: 150px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    
+    margin: 0;
+    padding: 0;
+}
+
+/* Align text properly */
+.fashion-top-deals-card h3 {
+  font-size: 16px;
+    margin:0;
+    padding: 0;
+    font-weight: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+  
+}
+
+/* Offer styles */
+.fashion-top-deals-offer {
+  font-size: 16px;
+    font-weight: bold;
+    color: #000000;
+    margin:0;
+    padding: 0;
+    border-radius: 5px;
+    background: #ffffff;
+    display: inline-block;
+   
+}
+
+.fashion-under-offer {
+  background: #ffffff;
+  color: #000;
+}
+
+.fashion-discount-offer {
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+}
+
+/* Arrows */
+.fashion-arrow {
+  background: #ececf2;
+  color: white;
+  border: none;
+  padding: 15px;
+  font-size: 30px;
+  cursor: pointer;
+  border-radius: 2px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  transition: background 0.3s;
+}
+.fashion-arrow:hover {
+  background: #616161;
+}
+
+.fashion-arrow.fashion-left {
+  left: 10px;
+}
+
+.fashion-arrow.fashion-right {
+  right: 10px;
+}
+
+.fashion-arrow:disabled {
+  background: rgb(99, 98, 98);
+  cursor: not-allowed;
+}

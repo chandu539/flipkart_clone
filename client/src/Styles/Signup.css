@@ -1,0 +1,95 @@
+.signup-container {
+    display: flex;
+    width: 800px;
+    height: auto;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 140px auto;
+}
+
+/* Left Section */
+.signup-left {
+    width: 40%;
+    background: #2874f0;
+    color: white;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.signup-left h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.signup-left p {
+    font-size: 1rem;
+}
+
+/* Right Section */
+.signup-right {
+    width: 60%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.signup-right label {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.signup-right input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-top: 8px;
+    margin-bottom: 15px;
+}
+
+/* Terms */
+.terms {
+    font-size: 0.8rem;
+    color: gray;
+    margin: 10px 0;
+}
+
+.terms a {
+    color: #2874f0;
+    text-decoration: none;
+}
+
+/* Signup Button */
+.signup-btn {
+    width: 100%;
+    padding: 12px;
+    background: #fb641b;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.signup-btn:hover {
+    background: #e65c18;
+}
+
+/* Already have an account */
+.already-account {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.already-account a {
+    color: #2874f0;
+    text-decoration: none;
+    font-weight: bold;
+}
