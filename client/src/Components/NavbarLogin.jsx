@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import "../styles/NavbarLogin.css";
+import "../Styles/NavbarLogin.css";
 import { FaShoppingCart, FaUser, FaSearch, FaUserCircle, FaBox, FaHeart, FaGift } from "react-icons/fa"; 
 
 const routes = {
