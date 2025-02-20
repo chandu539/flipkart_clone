@@ -48,4 +48,59 @@
     color: #007bff;
     text-decoration: none;
   }
+  @media (max-width: 1024px) {
+    .sidebar {
+      width: 220px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 200px;
+      padding: 15px;
+      margin-top: 40%;
+    }
+    
+    .filter-section h4 {
+      font-size: 14px;
+    }
+  
+    .input-box {
+      width: 70px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+      border-right: none;
+      border-bottom: 1px solid #ddd;
+      padding: 15px;
+      margin-top: 40%;
+    }
+  
+    .filter-section h4 {
+      font-size: 14px;
+      text-align: center;
+    }
+  
+    .input-box {
+      width: 60px;
+      text-align: center;
+    }
+  
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+  
+    ul li {
+      font-size: 12px;
+      padding: 5px;
+    }
+  }
   

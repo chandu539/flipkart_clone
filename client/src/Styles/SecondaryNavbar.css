@@ -105,6 +105,7 @@
     .category-list {
       flex-wrap: wrap; /* Allow categories to wrap in smaller screens */
       gap: 15px;
+      display: none;
     }
   
     .category-item {
