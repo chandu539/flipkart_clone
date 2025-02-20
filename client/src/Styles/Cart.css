@@ -192,4 +192,73 @@
     color: green;     /* Color for success */
     margin-bottom: 10px;
   }
-  
+  @media (max-width: 1024px) {
+    .wishlist-card, .cart-header {
+        width: 40%;
+    }
+    
+    .wishlist-content, .cart-content {
+        width: 90%;
+    }
+    
+    .cart-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cart-items-container, .price-details {
+        width: 100%;
+    }
+}
+
+/* Mobile Screens (max-width: 768px) */
+@media (max-width: 768px) {
+    .wishlist-card, .cart-header {
+        width: 50%;
+        margin-top: 30%;
+    }
+
+    .wishlist-content, .cart-content {
+        width: 95%;
+    }
+
+    .wishlist-item, .cart-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .item-image {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .place-order-btn {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+/* Small Mobile Screens (max-width: 480px) */
+@media (max-width: 480px) {
+    .wishlist-card, .cart-header {
+        width: 80%;
+        font-size: 18px;
+        margin-top: 50%;
+    }
+
+    .wishlist-content, .cart-content {
+        padding: 15px;
+    }
+
+    .price-details {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .place-order-btn {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+    }
+}
