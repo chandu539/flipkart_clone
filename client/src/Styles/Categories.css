@@ -95,7 +95,9 @@
   }
 
   .category-box {
-    width: 80px; /* Make the boxes even smaller for small screens */
+    width: 80px; 
+    margin-top: 5%;
+    /* Make the boxes even smaller for small screens */
   }
 
   .category-box img {

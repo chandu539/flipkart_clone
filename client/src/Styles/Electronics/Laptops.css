@@ -112,6 +112,7 @@
 @media (max-width: 768px) {
   .laptop-card{
     margin-top: 50%;
+    width: 250px;
   }
   .laptop-content {
     flex-direction: column;
@@ -120,7 +121,7 @@
   }
 
   .laptop-image {
-    max-width: 300px;
+    max-width: 250px;
   }
 
   .laptop-details {
