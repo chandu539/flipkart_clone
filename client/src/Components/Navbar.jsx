@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import "../styles/navbar.css";
+import "../Styles/Navbar.css";
 import { FaShoppingCart, FaUser, FaSearch } from "react-icons/fa";
 
 const routes = {
