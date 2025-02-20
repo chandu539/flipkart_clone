@@ -22,11 +22,11 @@ import Skincare from "./Pages/BeautyandPersonalCare/Skincare";
 import Haircare from "./Pages/BeautyandPersonalCare/Haircare";
 import Fragrances from "./Pages/BeautyandPersonalCare/Fragrances";
 import Grooming from "./Pages/BeautyandPersonalCare/Grooming";
-import WishList from "./Pages/wishlist";
 import Sports from "./Pages/SportsandFitness/Sports";
 import Signup from "./Pages/Signup";
 import MyProfile from "./Pages/MyProfile";
 import ProtectedRoute from "./Components/ProtectedRoute";
+import WishList from "./Pages/WishList";
 
 const App = () => {
   return (
@@ -59,7 +59,7 @@ const App = () => {
         <Route path="/sports" element={<Sports/>}/>
         <Route path="/signup" element={<Signup/>}/>
         <Route path="/cart" element={<ProtectedRoute><Cart/></ProtectedRoute>}/>
-        <Route path="/wishlist" element={<ProtectedRoute><WishList /></ProtectedRoute>} />
+        <Route path="/wishlist" element={<ProtectedRoute><WishList/></ProtectedRoute>} />
         <Route path="/profile" element={<ProtectedRoute><MyProfile /></ProtectedRoute>} />
         {/* Catch-All Route for Debugging */}
         <Route path="*" element={<h1>404 - Page Not Found</h1>} />
