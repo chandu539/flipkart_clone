@@ -107,6 +107,9 @@
 }
 
 @media (max-width: 768px) {
+  .mobile-card{
+    margin-top: 50%;
+  }
   .mobile-content {
     flex-direction: column;
     align-items: center;
@@ -129,6 +132,7 @@
 @media (max-width: 480px) {
   .mobile-card {
     width: 90%;
+    margin-top: 50%;
   }
 
   .mobile-name {
