@@ -5,6 +5,7 @@ import axios from 'axios';
 import toast from "react-hot-toast";
 import { FaHeart } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import API_BASE_URL from "../../config";
 
 const footWearData = [
   {
@@ -72,7 +73,7 @@ const FootWear = () => {
     };
 
     try {
-      const response = await axios.post("http://localhost:5000/api/wishlist", wishList);
+      const response = await axios.post(`${API_BASE_URL}/wishlist`, wishList);
       console.log("Item added to wishlist:", response.data);
       toast.success("Item added to wishlist successfully!");
     } catch (error) {
@@ -105,7 +106,7 @@ const FootWear = () => {
     };
 
     try {
-      const response = await axios.post("http://localhost:5000/api/cart", cartItem);
+      const response = await axios.post(`${API_BASE_URL}/cart`, cartItem);
       console.log("Item added to cart:", response.data);
       toast.success("Item added to cart successfully!");
     } catch (error) {

@@ -6,6 +6,7 @@ import NavbarLogin from "../Components/NavbarLogin";
 import Footer from "../Components/Footer";
 import SecondaryNavbar from "../Components/SecondaryNavbar";
 import "../Styles/Login.css";
+import API_BASE_URL from "../config";
 
 const Login = () => {
   const [emailOrMobile, setEmailOrMobile] = useState("");
@@ -15,7 +16,7 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/login", {
+      const res = await axios.post(`${API_BASE_URL}/auth/login`, {
         emailOrMobile,
         password,
       });
@@ -24,10 +25,10 @@ const Login = () => {
       localStorage.setItem("user", JSON.stringify(res.data.user));
 
       // Fetch user's cart and wishlist after login
-      const cartRes = await axios.get("http://localhost:5000/api/cart", {
+      const cartRes = await axios.get(`${API_BASE_URL}/cart`, {
         headers: { Authorization: `Bearer ${res.data.token}` },
       });
-      const wishlistRes = await axios.get("http://localhost:5000/api/wishlist", {
+      const wishlistRes = await axios.get(`${API_BASE_URL}/wishlist`, {
         headers: { Authorization: `Bearer ${res.data.token}` },
       });
 

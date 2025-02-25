@@ -3,6 +3,7 @@ import axios from 'axios';
 import { toast } from 'react-hot-toast';  
 import NavbarLogin from '../Components/NavbarLogin';
 import '../Styles/Cart.css';
+import API_BASE_URL from "../config";
 
 function Cart() {
   const [cartItems, setCartItems] = useState([]);
@@ -42,7 +43,7 @@ function Cart() {
   useEffect(() => {
     const fetchCartItems = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/cart");  
+        const response = await axios.get(`${API_BASE_URL}/cart`);  
         const items = response.data.data || [];
         
         const validItems = items.map(item => ({
@@ -84,7 +85,7 @@ function Cart() {
 
   const removeItem = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/cart/${id}`);
+      await axios.delete(`${API_BASE_URL}/cart/${id}`);
       const updatedCart = cartItems.filter(item => item._id !== id);
       setCartItems(updatedCart);
       calculatePriceDetails(updatedCart);

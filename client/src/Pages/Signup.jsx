@@ -6,6 +6,7 @@ import SecondaryNavbar from "../Components/SecondaryNavbar";
 import "../Styles/Signup.css";
 import { toast } from 'react-hot-toast'; 
 import { useNavigate } from "react-router-dom";
+import API_BASE_URL from "../config";
 
 function Signup() {
   const [formData, setFormData] = useState({
@@ -25,7 +26,7 @@ function Signup() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:5000/api/signup", formData);
+      const response = await axios.post(`${API_BASE_URL}/signup`, formData);
       console.log(response.data.message); 
         toast.success("Signed Successfully");
         navigate("/login");

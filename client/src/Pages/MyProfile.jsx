@@ -4,6 +4,7 @@ import axios from "axios";
 import "../Styles/MyProfile.css"; 
 import Navbarlogin from "../Components/NavbarLogin"
 import { toast } from 'react-hot-toast'; 
+import API_BASE_URL from "../config";
 
 const MyProfile = () => {
   const [user, setUser] = useState(null);
@@ -21,7 +22,7 @@ const MyProfile = () => {
       }
   
       try {
-        const res = await axios.get("http://localhost:5000/api/auth/profile", {
+        const res = await axios.get(`${API_BASE_URL}/api/auth/profile`, {
           headers: { Authorization: `Bearer ${token}` }, // Ensure correct header format
         });
         setUser(res.data);

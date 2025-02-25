@@ -3,6 +3,7 @@ import axios from 'axios';
 import { toast } from 'react-hot-toast';  
 import NavbarLogin from '../Components/NavbarLogin';
 import '../Styles/WishList.css';
+import API_BASE_URL from "../config";
 
 function WishList() {
   const [wishListItems, setWishListItems] = useState([]);
@@ -15,7 +16,7 @@ function WishList() {
         return;
       }
       try {
-        const response = await axios.get("http://localhost:5000/api/wishlist", {
+        const response = await axios.get(`${API_BASE_URL}/wishlist`, {
           headers: { Authorization: `Bearer ${token}` }
         });
         const items = response.data.data || [];
@@ -34,7 +35,7 @@ function WishList() {
       return;
     }
     try {
-      await axios.delete(`http://localhost:5000/api/wishlist/${id}`, {
+      await axios.delete(`${API_BASE_URL}/wishlist/${id}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       const updatedWishList = wishListItems.filter(item => item._id !== id);
