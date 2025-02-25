@@ -1,4 +1,4 @@
-require("dotenv").config(); 
+require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
@@ -8,23 +8,30 @@ const wishlistRoutes = require("./routes/wishlistRoutes");
 const authRoutes = require("./routes/authRoutes");
 
 const app = express();
-const PORT = process.env.PORT || 5000; 
+const PORT = process.env.PORT || 5000;
 
-// Middleware
-app.use(cors());
+// CORS Configuration for Vercel Frontend
+const corsOptions = {
+  origin: "https://flipkart-clone-frontend-khaki.vercel.app",
+  methods: "GET,POST,PUT,DELETE",
+  credentials: true,
+};
+
+app.use(cors(corsOptions));
 app.use(bodyParser.json());
 
 // MongoDB Connection
-mongoose.connect(process.env.MONGO_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
+mongoose
+  .connect(process.env.MONGO_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
   .then(() => console.log("Connected to MongoDB Atlas"))
   .catch((err) => console.error("MongoDB connection error:", err));
 
 // Routes
 app.use("/api/cart", cartRoutes);
-app.use("/api/wishlist", wishlistRoutes); 
+app.use("/api/wishlist", wishlistRoutes);
 app.use("/api/signup", authRoutes);
 app.use("/api/auth", authRoutes);
 
